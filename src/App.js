@@ -1,11 +1,10 @@
 
 import './App.css';
 import Alert from './components/Alert';
-import About from './components/About';
+// import About from './components/About';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import React, {useState} from 'react'
-import { Routes, Route, Link } from 'react-router-dom';
 
 
 function App() {
@@ -38,6 +37,7 @@ function App() {
       document.documentElement.setAttribute('data-bs-theme', 'light');
       showAlert("Dark mode has been Disabled", "success");
      
+
     }
   }
    // Blue mode function
@@ -61,11 +61,8 @@ function App() {
     <>
     <Navbar title='TextUtils' aboutText='About' mode = {mode} toggleMode = {toggleMode} blueToggle= {blueToggle} />
     <Alert alert= {alert} />
-     
-     <Routes>  {/* Import Routes */}
-        <Route path="/textform" element={<TextForm heading="Enter the text" title="TextForm" mode = {mode} showAlert = {showAlert}></TextForm>} />  {/* Import Route */}
-        <Route path="/about" element={<About mode = {mode} showAlert = {showAlert} />} />
-      </Routes>
+     <TextForm heading="Enter the text" mode = {mode} showAlert = {showAlert}></TextForm>
+     {/* <About></About> */}
     </>
   );
 }
