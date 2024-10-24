@@ -1,5 +1,6 @@
 import React from 'react'
-import PropTypes from 'prop-types'  
+import PropTypes from 'prop-types' 
+import { Routes, Route, Link } from 'react-router-dom';  
 
 export default function Navbar(props) {
   return (
@@ -12,11 +13,19 @@ export default function Navbar(props) {
           <div className="collapse navbar-collapse" id="navbarScroll">
               <ul className={`navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll text-${props.mode === 'light' ? 'dark' : 'light'}`}>
               <li className="nav-item">
+                <Link to="/home" className="nav-link active" aria-current="page">Home</Link>
+                  {/* <a className="nav-link active" aria-current="page" href="#">Home</a> */}
+              </li>
+              <li className="nav-item">
+                <Link to="/about" className="nav-link">{props.aboutText}</Link>
+                  {/* <a className="nav-link" href="#">{props.aboutText}</a> */}
+              </li>
+              {/* <li className="nav-item">
                   <a className="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li className="nav-item">
                   <a className="nav-link" href="#">{props.aboutText}</a>
-              </li>
+              </li> */}
               </ul>
               <div className="d-flex">
                 <div className={`form-check form-switch text-${props.mode === 'light' ? 'dark' : 'light'}`}>
