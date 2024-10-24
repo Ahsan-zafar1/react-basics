@@ -1,12 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types' 
-import { Routes, Route, Link } from 'react-router-dom';  
+import { Link } from 'react-router-dom';  
 
 export default function Navbar(props) {
   return (
     <nav className={`navbar navbar-expand-lg bg-${props.mode} `} data-bs-theme={props.mode}>
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">{props.title}</a>
+          <Link to="/home" className="navbar-brand" aria-current="page">{props.title}</Link>
+          {/* <a className="navbar-brand" href="#">{props.title}</a> */}
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
           </button>
