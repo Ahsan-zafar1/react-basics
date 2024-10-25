@@ -5,7 +5,7 @@ import About from './components/About';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import React, {useState} from 'react'
-import { Routes, Route, Link } from 'react-router-dom'; 
+import { Routes, Route } from 'react-router-dom'; 
 // import Home from './Home';
 // import About from './About';
 

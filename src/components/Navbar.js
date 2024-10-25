@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function Navbar(props) {
   return (
-    <nav className={`navbar navbar-expand-lg bg-${props.mode} `} data-bs-theme={props.mode}>
+    <nav className={`navbar navbar-expand-lg mb-4 bg-${props.mode} `} data-bs-theme={props.mode}>
         <div className="container-fluid">
           <Link to="/home" className="navbar-brand" aria-current="page">{props.title}</Link>
           {/* <a className="navbar-brand" href="#">{props.title}</a> */}
