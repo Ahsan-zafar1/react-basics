@@ -27,9 +27,9 @@ export default function TextForm(props) {
     // Function to copy text
     const copyToClipboard = () => {
         if (text.length === 0) return; // Prevent action if text is empty
-        let textBox = document.getElementById("mybox");
-        textBox.select();
-        navigator.clipboard.writeText(textBox.value);
+        // let textBox = document.getElementById("mybox");
+        // textBox.select();
+        navigator.clipboard.writeText(text);
         props.showAlert("Text copied", "success");
     };
 
@@ -45,7 +45,7 @@ export default function TextForm(props) {
         setText(event.target.value);
     };
 
-    const wordCount = text.trim().split(" ").filter(Boolean).length;
+    const wordCount = text.trim().split(/\s+/).filter(Boolean).length;
 
     return (
         <div className={`container`} data-bs-theme={props.mode}>

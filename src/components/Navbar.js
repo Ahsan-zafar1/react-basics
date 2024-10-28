@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function Navbar(props) {
   return (
-    <nav className={`navbar navbar-expand-lg mb-4 bg-${props.mode} `} data-bs-theme={props.mode}>
+    <nav className={`navbar navbar-expand-lg border-bottom mb-4 bg-${props.mode} `} data-bs-theme={props.mode}>
         <div className="container-fluid">
           <Link to="/home" className="navbar-brand" aria-current="page">{props.title}</Link>
           {/* <a className="navbar-brand" href="#">{props.title}</a> */}
@@ -29,10 +29,10 @@ export default function Navbar(props) {
               </li> */}
               </ul>
               <div className="d-flex">
-                <div className={`form-check form-switch text-${props.mode === 'light' ? 'dark' : 'light'}`}>
+                {/* <div className={`form-check form-switch text-${props.mode === 'light' ? 'dark' : 'light'}`}>
                   <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onClick={props.blueToggle} />
                   <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Enable blue mode</label>
-                </div>
+                </div> */}
                 <div className={`form-check form-switch text-${props.mode === 'light' ? 'dark' : 'light'}`}>
                   <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onClick={props.toggleMode} />
                   <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Enable mode</label>
